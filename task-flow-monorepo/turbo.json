@@ -5,8 +5,15 @@
             "dependsOn": [
                 "^build"
             ],
+            "env": [
+                "DATABASE_URL",
+                "SUPABASE_SERVICE_ROLE_KEY",
+                "NEXT_PUBLIC_SUPABASE_URL",
+                "NEXT_PUBLIC_SUPABASE_ANON_KEY"
+            ],
             "outputs": [
-                ".next/**"
+                ".next/**",
+                "!.next/cache/**"
             ]
         },
         "dev": {
